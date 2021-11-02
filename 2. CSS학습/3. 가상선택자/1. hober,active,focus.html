@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* hober: 마우스를 올렸을때 */
+        a:hover {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            /* 애니메이션 시간 조절 */
+            transition: 0.7s;
+        }
+        .box:hover {
+            width: 200px;
+        }
+
+        /* active: 마우스를 누르고있을때 */
+        .box:active {
+            height: 200px;
+            background: yellowgreen;
+        }
+        /* Ctrl + Shift + 방향키 : 방향키방향으로 드래그 */
+        /* Home: 커서가 해당줄 맨 앞으로, End: 커서가 해당줄 맨 뒤로  */
+        /* shift + Home: 해당줄 앞까지 드래그, Shift + End 방향키: 앞에서 뒤로 */
+
+        #common {
+            width: 100px;
+            outline: none;
+            border: 1px solid gray;
+            padding: 5px 10px;
+            margin-top: 20px;
+            transition: 0.6s;
+        }
+        /* focus: 특정 요소에 포커싱했을 때 */
+        #common:focus {
+            border-color: red;
+            width: 200px;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <a href="#">Hello!</a>
+    
+    <!-- .box 하면 div태그로 만들어줌 -->
+    <div class="box"></div>
+
+    <input type="text" id="common">
+
+</body>
+</html>

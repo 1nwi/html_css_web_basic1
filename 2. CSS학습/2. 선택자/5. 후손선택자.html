@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+        /* .앞을 붙이면 일치선택자, .앞을 띄어쓰면 후손선택자 */
+        /* div.orang은 자신만, div > .orang은 직속, div .orang은 모든 div 자손들 */
+        div .orang {
+            background: orange;
+        }
+
+    </style>
+
+<!-- 그룹선택자는 태그, 태그, 태그를 사용하면 됩니다.  -->
+</head>
+<body>
+    
+    <em>안녕안녕</em>
+    
+    <div>
+        <em>메롱메롱</em>
+        <ul>
+            <em>잘가잘가</em>
+            <li>사과</li>
+            <li>
+                <a href="#" class="orang">딸기</a>
+                </li>
+            <li class="orang">오렌지</li>
+        </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orang">오렌지</span>
+        <h3>파인애플</h3>
+
+    </div>
+    
+
+</body>
+</html>
