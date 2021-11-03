@@ -8,9 +8,11 @@
     <title>Document</title>
 
     <style>
+        /*  홀수를 뜻하는 단어 (odd)를 (2n + 1)대신 사용해도 됩니다 */
         #list li:nth-child(2n + 1) {
             background: yellow;
         }
+        /* 짝수를 뜻하는 단어 (even)을 (2n)대신 사용해도 됩니다. */
         #list li:nth-child(2n) {
             background: gray;
         }
@@ -25,10 +27,20 @@
             font-style: italic;
             border: 2px dotted aqua
         }
-        
+        /* 6번 다른 방법 #list li:first-child,
+                        #list li:nth-child(2) {
+                            border: 2px dotted aqua
+                            } */
         #list .list-two ~ li {
             border: 2px dashed violet
         }
+        /* 7번 다른 방법 */
+        /* #list li:nth-child(2) ~  li {
+            border: 2px dashed violet
+        } */
+        /* #list li:nth-child(n + 3) ~  li {
+             border: 2px dashed violet
+        } */
     </style>
 </head>
 <body>
@@ -39,7 +51,7 @@
         <ul id="list">
             <li>리스트1</li>
             <li class="list-two">리스트2</li>
-            <li class="list-three">리스트3</li>
+            <li >리스트3</li>
             <li>리스트4</li>
             <li>리스트5</li>
             <li>리스트6</li>

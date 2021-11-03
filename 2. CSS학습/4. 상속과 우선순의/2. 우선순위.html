@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* !importamt는 무한대이므로 가장 우선순위한다 */
+        div {
+            color: blue !important;
+        }
+        #c-y {
+            color: yellow;
+        }
+        .c-g {
+            color: green;
+        }
+        body {
+            color: aqua;
+        }
+        /*  가장 마지막에 해석된 태그가 우선 적용됨 그래서 red가 아닌 blue */
+        div {
+            color: red;
+        }
+
+        div#aaa .bbb h1 {
+            color: greenyellow;
+        }
+
+        h1 {
+            color: lightcoral;
+        }
+
+        #aaa .bbb h1{
+            color: gray;
+        }
+
+        .bbb h1 {
+            column-rule: orangered;
+        }
+        
+        div#aaa div.bbb h1 {
+            color: pink;
+        }
+        /* 명시도 점수는 
+        !imporant : 무한대
+        인라인 스타일 : 1000점
+        아이디 선택자 : 100점
+        클래스 선택자(:hover, :active, :first-child 등 포함) : 10점
+        태그 선택자(::before, ::after 등 포함) : 1점
+        전체 선택자(:not 포함) : 0점
+         */
+    </style>
+</head>
+<body>
+    
+    <div id="c-y" class="c-g" style="color: orange;">안녕하세요1</div>
+    
+    <div id="c-y" class="c-g">안녕하세요2</div>
+    
+    <div class="c-g">안녕하세요3</div>
+    
+    <div>안녕하세요4</div>
+
+    <section>안녕하세요5</section>
+
+    <hr>
+
+    <div id="aaa">
+        <div class="bbb">
+            <h1>안녕히 계세요!</h1>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

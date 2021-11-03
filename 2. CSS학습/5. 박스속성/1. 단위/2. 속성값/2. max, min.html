@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent {
+            border: 4px solid blue;
+            background: skyblue;
+            width: 100px;
+            height: 300px;
+        }
+        .child {
+            /* max, min을 부모가 크거나 작아도 max, min 해둔 범위까지만 */
+            background: orange;
+            height: 200px;
+            max-width: 500px;
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+</body>
+</html>
