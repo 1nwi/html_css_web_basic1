@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hello {
+            background: red;
+            font-size: 2em;
+            color: yellow;
+            padding: 20px;
+            width: 400px;
+            height: 200px;
+            /* 인라인요소를 구조적으로 블록요소로 변경시켜줌
+            반대로도 가능 */
+            display: block;
+        }
+        a{
+            background: yellowgreen;
+            width: 100px;
+            height: 100px;
+            /* 클릭영역을 넓힐수있는 용도로도 사용합니다 */
+            display: inline-block;
+        }
+        input {
+            width: 100px;
+            height: 50px;
+            display: inline-block;
+        }
+        input:nth-child(3) {
+            /* 자리가 완전히 사라짐 */
+            display: none;
+            
+            /* 투명도 0% 자리는그대로 남음 */
+            /* opacity: 0; */
+        }
+    </style>
+
+</head>
+<body>
+    
+    <span id="hello">안녕하세요!</span>
+    <a href="#">회원가입</a>
+    <a href="#">로그인</a>
+
+    <div class="box">
+        <input type="text" value="1">
+        <input type="text" value="2">
+        <input type="text" value="3">
+        <input type="text" value="4">
+        <input type="text" value="5">
+    </div>
+
+<script>
+
+    hello.onclick = e => {
+        hello.style.display = 'none';
+    }
+
+</script>
+
+</body>
+</html>

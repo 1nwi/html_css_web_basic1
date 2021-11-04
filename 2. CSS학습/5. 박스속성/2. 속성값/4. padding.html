@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 250px;
+            height: 250px;
+            background: orange;
+            color: white;
+            font-size: 2em;
+            padding-left: 50px;
+            padding-top: 30px;
+            
+            /* 마진이랑 똑같음 */
+            /* padding: 30px 50px 40px 20px; */
+
+            /* 패딩이나 보더속성으로 인해 박스가 커지는걸 방지 */
+            box-sizing: border-box;
+        }
+        /* padding을 사용할땐 주변 박스 사이즈까지 주의해야합니다. */
+        /* padding은 텍스트 밀때 많이 사용 */
+    </style>
+</head>
+<body>
+    
+    <div class="box">안녕하세요</div>
+
+</body>
+</html>

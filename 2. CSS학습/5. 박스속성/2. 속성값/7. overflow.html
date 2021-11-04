@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent {
+            width: 300px;
+            height: 250px;
+            border: 4px solid gray;
+            /* overflow: scroll 은 넘치지않아도 스콜ㄹ이 생김
+            auto는 안넘치지면 스크롤이 생기지않음  */
+            overflow: auto;
+
+        }
+        .child {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 4px solid orange;
+            font-size: 40px;
+        }
+        .child:hover {
+            /* 1에 가까울수록 뿌옇고 0에 가까울수록 진해짐 */
+            opacity: .3;  /* 0.x은 .x으로 해도 됩니다*/
+        }
+    </style>
+</head>
+<body>
+    <!-- .parent>.child{$}*4 -->
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+    </div>
+
+</body>
+</html>
