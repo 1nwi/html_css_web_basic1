@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 550px;
+            height: 350px;
+            border: 4px dashed gray;
+
+            background-color: orange;
+            background-image: url('../img/sky.jpg');
+            background-size: 150px 150px;
+            /* repeat 값이 기본값이니까 바둑판으로 반복하지 말아라~ = no-repeat */
+            background-repeat: no-repeat;
+            /* 포지션을 디테일하게 할때는 px로 조절가능 px , % 다 가능  */
+            /* background-postion: (좌우) (상하) */
+            background-position: left 30px;
+        }
+
+        /* background - 단축사용법
+        -> background: 색상 이미지경로 반복여부 위치 / 크기 스크롤여부;
+        순서는 상관없지만 위치는 꼭 크기앞에 쓰고 위치와 크기 사이에( / ) 꼭써야함  */
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

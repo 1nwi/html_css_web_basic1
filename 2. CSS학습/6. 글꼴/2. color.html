@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 40px;
+        }
+        .c1 {
+            /* color name 을 쓰면 브라우저마다 색상이 미묘한 차이가 있습니다 실무에서는
+            color name을 쓰지 않습니다 16진수 또는 rgb를 사용합니다. 실무에선 16진수 많이사용*/
+            /* color: #33ddaa; */
+            color: #3da;
+            /* color: #f00; */
+        }
+        .c2 {
+            /* rgb 끝값은 255  */
+            color: rgb(58, 200, 193);
+        }
+        .c3 {
+            color: rgba(58, 200, 193, 0.8);
+        }
+        #btn {
+            width: 100px;
+            height: 40px;
+            font-size: 1.5em;
+            background: rgb(54, 228, 77);
+        }
+        #btn:hover {
+            background: rgba(54, 228, 77, 0.8);
+        }
+    </style>
+
+</head>
+<body>
+    <!-- .c${hello!}*3 -->
+    <div class="c1">hello!</div>
+    <div class="c2">hello!</div>
+    <div class="c3">hello!</div>
+    <button id="btn">click!</button>
+
+</body>
+</html>

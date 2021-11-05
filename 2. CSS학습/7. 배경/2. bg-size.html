@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            /* 박스 400 * 300 */
+            width: 400px;
+            height: 300px;
+            border: 2px solid red;
+            margin: 100px;
+
+            /* 이미지 600 * 385 */
+            background-image: url(../img/tulip.jpg);
+            background-repeat: no-repeat;
+            /* background-size: (가로) (세로) */
+            /* background-size: cover는 비율을 유지하며 더 넓은 너비에 맞춰진다 */
+            background-size: cover;
+            /* 포지션으로 보여주고싶은 부분을 좌우 상하 조절가능 */
+            background-position: -50px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>
