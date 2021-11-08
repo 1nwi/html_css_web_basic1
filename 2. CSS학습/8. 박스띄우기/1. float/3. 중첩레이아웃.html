@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid red;
+            /* 중첩레이아웃의 버그를 해결하는 방법 두번쨰 : 부모요소에 overflow: hidden 
+            이 방법도 사용하지 않는게 좋습니다. */
+            /* overflow: hidden; */
+        }
+
+        .container2 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid blue;
+        }
+
+        .container3 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid green;
+        }
+        /* 중첩레이아웃의 버그를 해결하는 방법 세번쨰 : 부모의 가상요소를 만들어서 clear해라
+        이방법을 가장 추천합니다. 이 방법을 사용해주세요. */
+        /* .container::after {
+            content: '';
+            display: block;
+            clear:both
+        } */
+        /*  가상의 요소를 만들어서 여러개의 부모 요소에 클래스를 넣어두면 한번에
+        변경이 가능하므로 실무에서 많이 사용하는 */
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            background: yellowgreen;
+            /* 테두리 둥글게 */
+            border-radius: 20px;
+            float: left;
+        }
+        /* 중첩레이아웃의 버그를 해결하는 방법 첫번쨰
+         이방법은 사용하지마세요  */
+        /* .clearbox {
+            clear: both;
+        } */
+    </style>
+
+</head>
+<body>
+    
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="clearbox"></div>
+    </div>
+    <div class="container2 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="clearbox"></div>
+    </div>
+    <div class="container3 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="clearbox"></div>
+    </div>
+
+</body>
+</html>

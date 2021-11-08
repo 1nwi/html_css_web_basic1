@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <!--  3 x 3 의 박스배치
+        1번째 방법 .container 태그에 박스를 우선적으로 만듬: width 추가 -->
+    <style>
+        /* .container {
+            width: 520px;
+        } */
+        .box {
+            width: 150px;
+            height: 150px;
+            background: orange;
+            margin: 10px;
+            float: left;
+        }
+        /* 3 x 3박스배치 2번째 방법  */
+        /* 2열 레이아웃 만들땐 2n+1, 3열 레이아웃 만들땐 3n+1,  4열레이아웃 4n+1 */
+        .box:nth-child(3n + 1) {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- .container>.box{$}*9 -->
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+</body>
+</html>
