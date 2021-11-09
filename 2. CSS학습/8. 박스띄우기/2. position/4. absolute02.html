@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .root {
+            width: 600px;
+            height: 500px;
+            border: 4px dashed orange;
+            padding: 100px;
+            font-size: 30px;
+            position: relative;
+        }
+        .parent {
+            width: 400px;
+            height: 300px;
+            border: 4px dashed blue;
+            padding: 50px;
+            position: relative;
+        }
+        .child {
+            width: 120px;
+            height: 80px;
+            border: 4px dashed red;
+            background: tomato;
+            border-radius: 10px;
+            /*  박스안에 글들이 정중앙에 위치하게 하기 위해서는  
+            text-align: center  ,  line-height: 태그의 height 값과 동일하게*/
+            text-align: center;
+            line-height: 80px;
+        }
+        .abs {
+            /* absolute 는 부모의 position이 있는지 확인해서 기준을 정함 */
+            /* parent에 포지션이 없고 root에 포지션이 있으면 root가 기준이됨 */
+            /* parent와 root 둘다 포지션이 있으면 parent가 기준이됨 */
+            position: absolute;
+            top: 50px;
+            right: -30px;
+        }
+        /* 공식으로 외워서 쓰시면 좋습니다. */
+        .center-box {
+            /* 박스를 x, y축 중앙정렬하는 공식 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- .root>.parent>.child{$}*3 -->
+    <div class="root">
+        <div class="parent center-box">
+            <div class="child center-box">1</div>
+            <div class="child abs">2</div>
+            <div class="child">3</div>
+        </div>
+    </div>
+
+</body>
+</html>
