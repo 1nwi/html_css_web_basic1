@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: 50px;
+
+            /* transtition-property만 쓰면 변화가 없습니다 transition-duration(변화시간)을 넣어줘야합니다 */
+            /* transition-property: all;
+            transition-duration: 3s; */
+
+            /* 위 아래 같은것 */
+
+            /* 기본값 all */
+            /* transition: width 3s, background 1.5s; */
+
+            /* transition-property: all;
+            transition-duration: 3s;
+            transition-delay: 2s; */
+            transition: 1s;
+            transition-timing-function: ease-in;
+            /* property, duration, delay, time-function 순서는 상관없는듯 */
+            transition: all 1s 1s linear;
+        }
+        .box:hover {
+            width: 300px;
+            background: skyblue;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

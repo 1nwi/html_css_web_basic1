@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+        .box:hover {
+            /* animation-name: grow-up;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+
+
+            /* name과 duration을 먼저적고 나머지 순서상관없이 적음 
+            초는 앞에꺼가 항상 duration */
+            animation: grow-up 3s linear infinite alternate 0.5s
+        }
+        /* 애니메이션 효과 정의 */
+        @keyframes grow-up {
+            /* %는 더 세분화 시킬수있습니다 */
+            0% {
+                width: 100px;
+            }
+            50% {
+                width: 500px;
+                background: yellow;
+            }
+            100% {
+                width: 300px;
+                background: orange;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>
